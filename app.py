@@ -21,6 +21,7 @@ def get_pdf_text(pdf_docs):
         pdf_reader = PdfReader(pdf)
         for page in pdf_reader.pages:
             text += page.extract_text()
+    # print("text")
     return text
 
 def get_chunk(text):
@@ -71,6 +72,7 @@ def main():
     st.set_page_config("Chat with Multiple PDF")
     st.header("Chat with Multiple PDF using Gemini ")
     # st.set_option('server.allow_dangerous_deserialization', True)
+    #
 
 
     user_question = st.text_input("Ask a question from PDF files ")
